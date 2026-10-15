@@ -5,33 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style type="text/tailwindcss">
         @theme {
-        --font-exo: "Exo 2", sans-serif;
+            --font-exo: "Exo 2", sans-serif;
         }
     </style>
 
-    <style> html {scroll-behavior: smooth;} body {font-family: "Exo 2", sans-serif;} .fondo-portafolio { background: linear-gradient(110deg, #6415dc 0%, #4148ed 52%, #2479f5 100%);}
-        .tarjeta-proyecto {transition: transform 0.3s ease, box-shadow 0.3s ease;}.tarjeta-proyecto:hover {transform: translateY(-5px);box-shadow: 0 12px 28px rgba(76, 201, 240, 0.25);}
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Exo 2", sans-serif;
+        }
+
+        .fondo-portafolio {
+            background: linear-gradient(110deg, #6415dc 0%, #4148ed 52%, #2479f5 100%);
+        }
+
+        .tarjeta-proyecto {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarjeta-proyecto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(76, 201, 240, 0.25);
+        }
     </style>
 </head>
 
 <body class="min-h-screen flex flex-col bg-[#303030] text-white font-exo">
+
     <div class="bg-[#303030] shadow-md shadow-black/20">
         <header class="max-w-[1400px] mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <a href="#inicio" class="text-xl sm:text-2xl font-semibold text-white no-underline">Mi Portafolio</a>
-
+            <a href="#inicio" class="text-xl sm:text-2xl font-semibold text-white no-underline"> Mi Portafolio</a>
             <nav aria-label="Menú principal">
                 <ul class="flex flex-wrap justify-center items-center gap-1 sm:gap-2 text-sm sm:text-base font-medium">
                     <li><a href="#inicio" class="inline-block rounded-md bg-blue-600 px-3 py-2 text-white"> Introducción</a></li>
                     <li><a href="#proyectos" class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10">Proyectos</a></li>
-                    <li><a href="#" data-boton class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10">Noticias</a></li>
-                    <li><a href="#" data-boton class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10">Contacto</a></li>
+                    <li><a href="#noticias" class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10">Noticias</a></li>
+                    <li><a href="#contacto" class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10"> Contacto</a></li>
                 </ul>
             </nav>
         </header>
@@ -40,11 +58,10 @@
     <main id="inicio" class="fondo-portafolio flex flex-grow items-center justify-center px-5 py-14 sm:py-20 text-center">
         <section class="w-full max-w-[1000px] flex flex-col items-center">
             <div class="h-32 w-32 sm:h-40 sm:w-40 rounded-full border-4 border-white overflow-hidden shadow-lg">
-                <img src="src/kibi.jpg" alt="Kibi" class="w-full h-full object-cover">
+                <img src="src/kibi.jpg" alt="Foto de perfil de Nicolás" class="w-full h-full object-cover">
             </div>
 
             <h1 class="mt-5 text-4xl sm:text-5xl font-bold">Nicolás</h1>
-
             <p class="mt-3 text-lg sm:text-2xl font-normal">Estudiante de informática Duoc UC</p>
 
             <a
@@ -55,16 +72,14 @@
             >
                 https://github.com/kibo64
             </a>
+
         </section>
     </main>
-
     <section id="proyectos" class="bg-[#240046] px-5 py-16 sm:py-20">
         <div class="max-w-[1200px] mx-auto">
-
-            <div class="text-center mb-10">
-                <p class="text-sm uppercase tracking-[0.25em] text-[#4CC9F0] font-bold"> Mi trabajo</p>
-                <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-white"> Mis proyectos
-                </h2><p class="text-white/70 mt-3 max-w-2xl mx-auto">Este es uno de los proyectos que he desarrollado durante mi aprendizaje.</p>
+            <div class="text-center mb-10"><p class="text-sm uppercase tracking-[0.25em] text-[#4CC9F0] font-bold">Mi trabajo</p>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-white">Mis proyectos</h2>
+                <p class="text-white/70 mt-3 max-w-2xl mx-auto">Estos son algunos de los proyectos que he desarrollado durante mi aprendizaje.</p>
             </div>
             <div class="flex justify-center">
                 <article class="tarjeta-proyecto w-full max-w-md bg-[#3C096C] rounded-xl overflow-hidden border border-[#4CC9F0]/30 shadow-md shadow-[#4CC9F0]/20 flex flex-col">
@@ -75,21 +90,17 @@
                             class="w-full h-full object-cover"
                         >
                     </div>
-
                     <div class="p-5 flex flex-col flex-grow">
                         <span class="text-xs text-[#F72585] font-bold mb-2">
                             HTML · Tailwind CSS · JavaScript
                         </span>
-
                         <h3 class="text-xl font-bold text-white mb-3">
                             LEVEL-UP GAMER
                         </h3>
-
                         <p class="text-sm text-white/80 mb-5 flex-grow">
                             Tienda gamer con catálogo de productos,
                             perfil de usuario y carrito de compras.
                         </p>
-
                         <a
                             href="https://kibo64.github.io/LEVEL-UP-GAMER/"
                             target="_blank"
@@ -98,6 +109,7 @@
                         >
                             Ver proyecto
                         </a>
+
                     </div>
                 </article>
 
@@ -105,17 +117,140 @@
         </div>
     </section>
 
+    <section id="noticias" class="bg-[#160a2d] px-5 py-16 sm:py-20">
+        <div class="max-w-[1000px] mx-auto">
+            <div class="text-center mb-10">
+                <p class="text-sm uppercase tracking-[0.25em] text-[#4CC9F0] font-bold">Novedades</p>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">Noticias</h2>
+                <p class="text-white/70 mt-3">Novedades sobre mis proyectos y mi aprendizaje.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="tarjeta-proyecto bg-[#3C096C] rounded-xl border border-[#4CC9F0]/30 p-6">
+                    <p class="text-sm text-[#4CC9F0] font-bold mb-2">Aprendizaje</p>
+                    <h3 class="text-xl font-bold mb-3">Mi portafolio web</h3>
+                    <p class="text-white/80">
+                        Estoy mejorando mi portafolio utilizando HTML,
+                        Tailwind CSS y JavaScript para presentar mis trabajos.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="bg-[#240046] px-5 py-16 sm:py-20">
+        <div class="max-w-[700px] mx-auto">
+            <div class="text-center mb-10">
+                <p class="text-sm uppercase tracking-[0.25em] text-[#4CC9F0] font-bold">Hablemos</p>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">Contacto</h2>
+                <p class="text-white/70 mt-3">Puedes visitar mi GitHub o preparar un mensaje.</p>
+            </div>
+            <div class="bg-[#3C096C] rounded-xl border border-[#4CC9F0]/30 p-6 sm:p-8">
+                <p class="text-white/80 mb-5 text-center">Mi perfil de GitHub</p>
+                <a
+                    href="https://github.com/kibo64"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block text-center bg-[#F72585] rounded-lg px-4 py-3 font-bold hover:bg-[#d91b70] transition-colors"
+                >
+                    Visitar mi GitHub
+                </a>
+                <form id="formulario-contacto" class="mt-8 space-y-4">
+                    <div>
+                        <label for="nombre" class="block mb-2 font-medium">
+                            Tu nombre
+                        </label>
+                        <input
+                            id="nombre"
+                            name="nombre"
+                            type="text"
+                            required
+                            maxlength="80"
+                            autocomplete="name"
+                            class="w-full rounded-lg bg-[#160a2d] border border-white/20 px-4 py-3 text-white"
+                            placeholder="Escribe tu nombre"
+                        >
+                    </div>
+                    <div>
+                        <label for="correo" class="block mb-2 font-medium">
+                            Tu correo electrónico
+                        </label>
+                        <input
+                            id="correo"
+                            name="correo"
+                            type="email"
+                            required
+                            maxlength="254"
+                            autocomplete="email"
+                            class="w-full rounded-lg bg-[#160a2d] border border-white/20 px-4 py-3 text-white"
+                            placeholder="correo@ejemplo.com"
+                        >
+                    </div>
+                    <div>
+                        <label for="mensaje" class="block mb-2 font-medium">
+                            Mensaje
+                        </label>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="4"
+                            required
+                            maxlength="2000"
+                            class="w-full rounded-lg bg-[#160a2d] border border-white/20 px-4 py-3 text-white"
+                            placeholder="Escribe tu mensaje"
+                        ></textarea>
+                    </div>
+                    <button
+                        type="submit"
+                        class="w-full rounded-lg bg-blue-600 px-4 py-3 font-bold hover:bg-blue-700 transition-colors"
+                    >
+                        Preparar mensaje
+                    </button>
+                    <p
+                        id="estado-contacto"
+                        class="text-sm text-white/70"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+            </div>
+        </div>
+    </section>
     <footer class="bg-[#160a2d] px-5 py-6 text-center text-sm text-white/70 border-t border-[#F72585]/30">
         <p>&copy; 2026 Nicolás. Portafolio personal.</p>
+        <a href="#inicio" class="inline-block mt-2 text-[#4CC9F0] hover:underline">
+            Volver al inicio ↑
+        </a>
     </footer>
-
     <script>
-        document.querySelectorAll("[data-boton]").forEach(function (boton) {
-            boton.addEventListener("click", function (evento) {
-                evento.preventDefault();
-            });
+        const formulario = document.getElementById("formulario-contacto");
+        const estado = document.getElementById("estado-contacto");
+
+        formulario.addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            const nombre = document.getElementById("nombre").value.trim();
+            const correo = document.getElementById("correo").value.trim();
+            const mensaje = document.getElementById("mensaje").value.trim();
+
+            if (!nombre || !correo || !mensaje) {
+                estado.textContent = "Completa todos los campos antes de continuar.";
+                return;
+            }
+
+            const asunto = encodeURIComponent("Contacto desde mi portafolio");
+
+            const cuerpo = encodeURIComponent(
+                "Nombre: " + nombre +
+                "\nCorreo: " + correo +
+                "\n\nMensaje:\n" + mensaje
+            );
+
+            estado.textContent =
+                "Se intentará abrir tu aplicación de correo para preparar el mensaje.";
+
+            window.location.href =
+                "mailto:?subject=" + asunto + "&body=" + cuerpo;
         });
     </script>
-
 </body>
 </html>
